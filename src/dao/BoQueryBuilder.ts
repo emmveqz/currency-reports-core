@@ -1,7 +1,6 @@
 
 import * as Decorator from "@emmveqz/currency-reports-core-interfaces/dist/Decorator"
 import { EscapeString } from "@emmveqz/currency-reports-tools/dist/Validator"
-import config from "../config/my-config-vars"
 
 import BaseBo from "../bos"
 
