@@ -20,9 +20,11 @@ type CmdResult = RowDataPacket[][]|mysql.OkPacket
 
 export default class MyDb implements IMyDb {
   public static readonly STREAM_BUFFER_SIZE = 12
+  public selectedSchema: string
   private connOptions: mysql.ConnectionConfig
 
   constructor({ Database, Host, Pass, User }: DbConnection) {
+    this.selectedSchema = Database
     this.connOptions = { database: Database, dateStrings: true, host: Host, password: Pass, user: User }
   }
 

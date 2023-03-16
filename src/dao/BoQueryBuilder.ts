@@ -217,7 +217,7 @@ export default class BoQueryBuilder implements IQueryBuilder<IBaseBo, IBaseBoFac
   private skipOrderBy: boolean = false
   private limitCmd: string = ""
 
-  constructor(public schema: string = config.MYVAR_CORE_DB_DEFAULTSCHEMA, public orderBy: OrderBy = { Prop: "" }, public page?: Page) {
+  constructor(public schema: string, public orderBy: OrderBy = { Prop: "" }, public page?: Page) {
   }
 
   public GetSqlCmd(): string|Error {

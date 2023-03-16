@@ -22,7 +22,7 @@ export default abstract class CommonDao<IQry extends BoQueryBuilder = BoQueryBui
 
   constructor(db: IMyDb, orderBy?: OrderBy, page?: Page, qry?: IQry) {
     this.db = db
-    this.qry = qry === undefined ? new BoQueryBuilder(undefined, orderBy, page) as IQry : qry
+    this.qry = qry === undefined ? new BoQueryBuilder(db.selectedSchema, orderBy, page) as IQry : qry
   }
 
   /**
