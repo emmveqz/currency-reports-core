@@ -3,5 +3,6 @@
 /.vscode/
 /.gitignore
 /src/
+/gen-vars-tsconfig.json
 /tsconfig.json
 /tslint.json
