@@ -1,0 +1,46 @@
+{
+  "name": "@emmveqz/currency-reports-core",
+  "version": "1.0.0",
+  "description": "Currency Reports (core)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc --build ./tsconfig.json",
+    "clean-js": "rm -f ./src/*.js   &&   rm -f ./src/bos/*.js   &&   rm -f ./src/dao/*.js",
+    "prepack": "npm run clean-js   &&   rm -fR ./dist   &&   npm run build",
+    "dummy": "test"
+  },
+  "author": "Emmanuel Velazquez Lopez",
+  "license": "ISC",
+  "homepage": "https://github.com/emmveqz/currency-reports-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/emmveqz/currency-reports-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emmveqz/currency-reports-core/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bundledDependencies": [
+  ],
+  "dependencies": {
+    "@emmveqz/currency-reports-core-enums": "^1.0.0",
+    "@emmveqz/currency-reports-core-interfaces": "^1.0.0",
+    "@types/async": "^3.0.2",
+    "@types/lodash": "^4.14.144",
+    "@types/mysql": "^2.15.15",
+    "@types/node": "^12.7.3",
+    "async": "^3.1.0",
+    "lodash": "^4.17.15",
+    "mime": "^2.4.4",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.7.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.4"
+  }
+}
